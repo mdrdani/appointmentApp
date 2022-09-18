@@ -58,14 +58,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="">Umur</label>
-                        <input type="text"  wire:model="age" class="form-control">
+                        <input type="number"  wire:model="age" class="form-control">
                         @error('age') <p class="text-danger">{{ $message }}</p> @enderror
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="">Whatsapp</label>
-                        <input type="text" wire:model="phone_number" class="form-control">
+                        <input type="text" wire:model="phone_number" class="form-control" placeholder="08******">
                         @error('phone_number') <p class="text-danger">{{ $message }}</p> @enderror
                     </div>
                 </div>
@@ -96,9 +96,9 @@
         function showHideNote() {
             getValue = document.getElementById("note").value;
             if (getValue == 'Lain-Lain') {
-                document.getElementById('note_form').style.display = 'block';
+                document.getElementById('note_form').style.display = "block";
             } else {
-                document.getElementById('note_form').style.display = 'none';
+                document.getElementById('note_form').style.display = "none";
             }
         }
     </script>
