@@ -1,6 +1,6 @@
 <div>
     {{-- Be like water. --}}
-    <section id="why-us" class="why-us">
+    {{-- <section id="why-us" class="why-us">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 d-flex align-items-stretch">
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section id="counts" class="counts">
         <div class="container">
             <div class="row">

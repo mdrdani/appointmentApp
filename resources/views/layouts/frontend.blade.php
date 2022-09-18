@@ -25,22 +25,8 @@
     @livewireStyles
 </head>
 <body>
-    <div class="d-flex align-items-center fixed-top" id="topbar">
-        <div class="container d-flex justify-content-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope"></i><a href="mailto:it@darmabangsa.sch.id">it@darmabangsa.sch.id</a>
-                <i class="bi bi-phone">0812-7159-8519</i>
-            </div>
-            <div class="d-none d-lg-flex social-links align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            </div>
-        </div>
-    </div>
 
-        <header class="fixed-top" id="header">
+        <header class="d-flex align-items-center fixed-top" id="header">
             <div class="container d-flex align-items-center">
                 <h1 class="logo me-auto">Booking Counseling SDB</h1>
                 <nav class="navbar order-last order-lg-0" id="navbar">
@@ -58,7 +44,7 @@
             <div class="container">
                 <h1>Selamat Datang</h1>
                 <h2>Booking Counseling Sekolah Darma Bangsa</h2>
-                <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                {{-- <a href="#about" class="btn-get-started scrollto">Get Started</a> --}}
             </div>
         </section>
         
@@ -69,7 +55,7 @@
                 <div class="container">
                     <div class="section-title">
                         <h2>Hubungi Kami</h2>
-                        <p>Temukan kami di alamat berikut ini untuk konsultasi lebih lanjut</p>
+                        <p>Temukan di alamat berikut ini untuk konsultasi lebih lanjut</p>
                     </div>
                 </div>
                 <div>
@@ -82,18 +68,18 @@
             <div class="container d-md-flex py-4">
                 <div class="me-md-auto text-center text-md-start">
                     <div class="copyright">
-                        &copy; Copyright <strong><span>Booking Counseling SDB</span></strong>. All Rights Reserved
+                        <strong><span>Booking Counseling SDB</span></strong>. by IT Sekolah Darma Bangsa
                     </div>
-                    <div class="credits">
+                    {{-- <div class="credits">
                         Designed by <a href="https://darmabangsa.sch.id">Sekolah Darma Bangsa</a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                     <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                     <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                     <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
                 </div>
             </div>
         </footer>
