@@ -65,8 +65,10 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="">Whatsapp</label>
+                        <br>
                         <input type="text" wire:model="phone_number" class="form-control" placeholder="08******">
                         @error('phone_number') <p class="text-danger">{{ $message }}</p> @enderror
+                        <span class="badge rounded-pill text-bg-warning">Mohon Masukan Nomor yang dapat di hubungi via Whatsapp/Telpon</span>
                     </div>
                 </div>
             </div>
@@ -74,13 +76,13 @@
                 <label for="">Keperluan</label>
                 <select wire:model="note" onchange="showHideNote()" id="note" class="form-control">
                     <option value="">Pilih</option>
-                    <option value="Kontrol Hamil">Kontrol Hamil</option>
-                    <option value="Promil">Promil</option>
+                    <option value="Kontrol Siswa">Kontrol Siswa</option>
+                    <option value="Kontrol Pribadi">Kontrol Pribadi</option>
                     <option value="Lain-Lain">Lain-Lain</option>
                 </select>
                 @error('note') <p class="text-danger">{{ $message }}</p> @enderror
             </div>
-            <div class="form-group" id="note_form" style="display: none">
+            <div wire:ignore.self class="form-group" id="note_form" style="display: none">
                 <label for="">Catatan</label>
                 <textarea wire:model="note_additional" class="form-control" id="note_additional" cols="5" rows="5"></textarea>
                 @error('note_additional') <p class="text-danger">{{ $message }}</p> @enderror

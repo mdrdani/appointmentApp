@@ -25,7 +25,7 @@ class Appointment extends Component
         'slot' => 'required|exists:daily_slots,id',
         'name' => 'required|string|max:100',
         'age' => 'required|numeric|digits:2',
-        'phone_number' => 'required|numeric',
+        'phone_number' => 'required|numeric|digits:12',
         'note' => 'required|string',
         'note_additional' => 'nullable|string|max:200'
     ];

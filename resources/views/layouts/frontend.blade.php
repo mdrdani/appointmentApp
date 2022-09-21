@@ -27,7 +27,7 @@
 <body>
         <header class="d-flex align-items-center fixed-top" id="header">
             <div class="container d-flex align-items-center">
-                <h1 class="logo me-auto">Booking Counseling SDB</h1>
+                <h1 class="logo me-auto">Booking Counseling</h1>
                 <nav class="navbar order-last order-lg-0" id="navbar">
                     <ul>
                         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
@@ -42,7 +42,7 @@
         <section class="d-flex align-items-center" id="hero">
             <div class="container">
                 <h1>Selamat Datang</h1>
-                <h2>Booking Counseling Sekolah Darma Bangsa</h2>
+                <h2>di Konsultasi Sekolah Darma Bangsa</h2>
                 
             </div>
         </section>
@@ -79,11 +79,12 @@
         <div id="preloader"></div>
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
         
-        <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+        <script src="{{ asset('ui/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
         <script src="{{ asset('ui/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('ui/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.js"></script>
+        <script src="{{ asset('ui/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
         <script src="{{ asset('ui/assets/vendor/php-email-form/validate.js') }}"></script>
+
     
         <script src="{{ asset('ui/assets/js/main.js') }}"></script>
         @livewireScripts
