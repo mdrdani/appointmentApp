@@ -1,4 +1,5 @@
 <div>
+    @livewire('order.progress')
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -37,8 +38,8 @@
     </div>
 
   	<!-- MODAL UNTUK MENAMPILKAN DATA ANTRIAN -->
-    <div class="modal fade" id="modalDataPasien" tabindex="-1" role="dialog" aria-labelledby="modalPasien" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+    <div wire:ignore.self class="modal fade" id="modalDataPasien" tabindex="-1" role="dialog" aria-labelledby="modalPasien" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalPasien">{{ $modalTitle }}</h5>
@@ -72,7 +73,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

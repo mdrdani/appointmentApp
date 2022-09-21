@@ -112,4 +112,15 @@ class Appointment extends Component
         ];
         return view('livewire.order.appointment', compact('days'));
     }
+
+    public function hydrate()
+    {
+        //JIKA PROPERTY timeSlot ADALAH SEBUAH COLLECTION
+        if (is_a($this->timeSlot, 'Illuminate\Database\Eloquent\Collection')) {
+            //MAKA KITA GUNAKAN FUNGSI loadCount UNTUK MENGAMBIL ULANG DATA ORDERS
+            $this->timeSlot->loadCount(['orders' => function ($query) {
+                $query->where('day', $this->day);
+            }]);
+        }
+    }
 }

@@ -21,25 +21,10 @@
     <link href="{{ asset('ui/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('ui/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('ui/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('ui/assets/css/style.css') }}" rel="stylesheet">    
     @livewireStyles
 </head>
 <body>
-    {{-- <div id="topbar" class="d-flex align-items-center fixed-top">
-        <div class="container d-flex justify-content-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope"></i> <a href="mailto:admin@daengweb.id">admin@daengweb.id</a>
-                <i class="bi bi-phone"></i> +6285-343-966-997
-            </div>
-            <div class="d-none d-lg-flex social-links align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            </div>
-        </div>
-    </div> --}}
-
         <header class="d-flex align-items-center fixed-top" id="header">
             <div class="container d-flex align-items-center">
                 <h1 class="logo me-auto">Booking Counseling SDB</h1>
@@ -58,7 +43,7 @@
             <div class="container">
                 <h1>Selamat Datang</h1>
                 <h2>Booking Counseling Sekolah Darma Bangsa</h2>
-                {{-- <a href="#about" class="btn-get-started scrollto">Get Started</a> --}}
+                
             </div>
         </section>
         
@@ -84,26 +69,20 @@
                     <div class="copyright">
                         <strong><span>Booking Counseling SDB</span></strong>. by IT Sekolah Darma Bangsa
                     </div>
-                    {{-- <div class="credits">
-                        Designed by <a href="https://darmabangsa.sch.id">Sekolah Darma Bangsa</a>
-                    </div> --}}
+                  
                 </div>
                 <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                    {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
+                    
                 </div>
             </div>
         </footer>
         <div id="preloader"></div>
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
         
-        <script src="{{ asset('ui/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
         <script src="{{ asset('ui/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('ui/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-        <script src="{{ asset('ui/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.js"></script>
         <script src="{{ asset('ui/assets/vendor/php-email-form/validate.js') }}"></script>
     
         <script src="{{ asset('ui/assets/js/main.js') }}"></script>
