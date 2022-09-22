@@ -6,8 +6,8 @@
                 <div class="count-box">
                     <i class="fas fa-users"></i>
                     <span data-purecounter-start="0" data-purecounter-end="{{ $totalToday }}" data-purecounter-duration="1" class="purecounter">{{ $totalToday }}</span>
-                    <p>Pasien (Hari Ini)</p>
-                    <button type="button" wire:click="openModal('Data Pasien (Hari Ini)', 1)" data-bs-toggle="modal" data-bs-target="#modalDataPasien" class="btn btn-primary btn-sm mt-2">Lihat Data</button>
+                    <p>Tamu (Hari Ini)</p>
+                    <button type="button" wire:click="openModal('Data Tamu (Hari Ini)', 1)" data-bs-toggle="modal" data-bs-target="#modalDataPasien" class="btn btn-primary btn-sm mt-2">Lihat Data</button>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
@@ -30,8 +30,8 @@
                 <div class="count-box">
                     <i class="fas fa-award"></i>
                     <span data-purecounter-start="0" data-purecounter-end="{{ $total }}" data-purecounter-duration="1" class="purecounter">{{ $total }}</span>
-                    <p>Total Pasien</p>
-                    <button type="button" wire:click="openModal('Data Total Pasien', 4)" data-bs-toggle="modal" data-bs-target="#modalDataPasien" class="btn btn-primary btn-sm mt-2">Lihat Data</button>
+                    <p>Total Tamu</p>
+                    <button type="button" wire:click="openModal('Data Total Tamu', 4)" data-bs-toggle="modal" data-bs-target="#modalDataPasien" class="btn btn-primary btn-sm mt-2">Lihat Data</button>
                 </div>
             </div>
         </div>

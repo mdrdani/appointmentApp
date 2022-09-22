@@ -67,7 +67,7 @@
             <div class="container d-md-flex py-4">
                 <div class="me-md-auto text-center text-md-start">
                     <div class="copyright">
-                        <strong><span>Booking Counseling SDB</span></strong>. by IT Sekolah Darma Bangsa
+                        <strong><span>App</span></strong>. by IT Sekolah Darma Bangsa
                     </div>
                   
                 </div>
