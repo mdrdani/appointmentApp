@@ -1,5 +1,8 @@
 <?php
 
+// use statement
+use App\Http\Livewire\Admin\Order\OrderIndex;
+use App\Http\Livewire\Admin\Order\OrderProgress;
 use App\Http\Livewire\BookingOnline;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +27,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/appoinment', OrderIndex::class)->name('admin.order.index');
+    Route::get('/antrian', OrderProgress::class)->name('admin.order.progress');
 });

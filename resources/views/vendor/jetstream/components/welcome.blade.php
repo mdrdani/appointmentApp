@@ -7,7 +7,7 @@
         <img class="w-44" src="{{ asset('ui/assets/img/LogoSDBBaru.png') }}" alt="">
     </div>
     <div class="mt-8 text-2xl text-center">
-        Welcome to your Booking Counseling SDB application!
+        Welcome to Booking Counseling application!
     </div>
 
     <div class="mt-6 text-gray-500 text-center">
