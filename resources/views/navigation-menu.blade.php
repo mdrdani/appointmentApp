@@ -16,8 +16,8 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('admin.order.index') }}" :active="request()->routeIs('admin.order.index')">Daftar Pasien</x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('admin.order.progress') }}" :active="request()->routeIs('admin.order.progress')">Antrian Pasien</x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('admin.order.index') }}" :active="request()->routeIs('admin.order.index')">Daftar Tamu</x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('admin.order.progress') }}" :active="request()->routeIs('admin.order.progress')">Antrian Tamu</x-jet-nav-link>
                 </div>
             </div>
 
