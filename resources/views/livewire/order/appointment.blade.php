@@ -76,8 +76,10 @@
                 <label for="">Keperluan</label>
                 <select wire:model="note" onchange="showHideNote()" id="note" class="form-control">
                     <option value="">Pilih</option>
-                    <option value="Kontrol Siswa">Kontrol Siswa</option>
-                    <option value="Kontrol Pribadi">Kontrol Pribadi</option>
+                    <option value="Pelayanan Rawat Jalan">Pelayanan Rawat Jalan</option>
+                    <option value="Pelayanan Rawat Inap">Pelayanan Rawat Inap</option>
+                    <option value="Pelayanan Ibu dan Anak Terpadu">Pelayanan Ibu dan Anak Terpadu</option>
+                    <option value="Pelayanan Bedah Sentral dan Anastesi">Pelayanan Bedah Sentral dan Anastesi</option>
                     <option value="Lain-Lain">Lain-Lain</option>
                 </select>
                 @error('note') <p class="text-danger">{{ $message }}</p> @enderror
