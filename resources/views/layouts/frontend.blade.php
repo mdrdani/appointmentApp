@@ -27,7 +27,7 @@
 <body>
         <header class="d-flex align-items-center fixed-top" id="header">
             <div class="container d-flex align-items-center">
-                <h1 class="logo me-auto">Booking Counseling</h1>
+                <h1 class="logo me-auto">R.S. Sejahtera</h1>
                 <nav class="navbar order-last order-lg-0" id="navbar">
                     <ul>
                         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
@@ -42,7 +42,7 @@
         <section class="d-flex align-items-center" id="hero">
             <div class="container">
                 <h1>Selamat Datang</h1>
-                <h2>di Konsultasi Sekolah Darma Bangsa</h2>
+                <h2>di Rumah Sakit Sejahtera</h2>
                 
             </div>
         </section>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div>
-                    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.2560901546017!2d105.24839631426097!3d-5.377870455286361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dac03c003739%3A0x616ad4636ec74d46!2sDarma%20Bangsa%20School!5e0!3m2!1sen!2sid!4v1663256698387!5m2!1sen!2sid" frameborder="0" allowfullscreen></iframe>
+                    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.0675661870673!2d110.50052181491056!3d-7.3463099743087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a79ce0a51a7eb%3A0xa5f2f207b2bf6edd!2sSejahtera%20Bakti%20Hospital!5e0!3m2!1sen!2sid!4v1678171763012!5m2!1sen!2sid" frameborder="0" allowfullscreen></iframe>
                 </div>
                 </div>
             </section>
@@ -67,7 +67,7 @@
             <div class="container d-md-flex py-4">
                 <div class="me-md-auto text-center text-md-start">
                     <div class="copyright">
-                        <strong><span>App</span></strong>. by IT Sekolah Darma Bangsa
+                        <strong><span>Aplikasi</span></strong>. by Localhost
                     </div>
                   
                 </div>
