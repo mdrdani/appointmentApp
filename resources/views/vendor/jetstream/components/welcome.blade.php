@@ -4,14 +4,14 @@
     </div>
 
     <div class="flex justify-center">
-        <img class="w-44" src="{{ asset('ui/assets/img/LogoSDBBaru.png') }}" alt="">
+        <img class="w-44" src="{{ asset('ui/assets/img/logors.png') }}" alt="">
     </div>
     <div class="mt-8 text-2xl text-center">
-        Welcome to Booking Counseling application!
+        Welcome to R.S Sejahtera Application
     </div>
 
     <div class="mt-6 text-gray-500 text-center">
-        Aplikasi untuk mengatur booking untuk Siswa/Siswi Sekolah Darma Bangsa.
+        Aplikasi untuk mengatur pelayanan di Rumah Sakit Sejahtera
     </div>
 </div>
 
