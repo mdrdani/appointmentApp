@@ -40,3 +40,9 @@ RUN php artisan config:cache && \
      chmod 777 -R /var/www/html/storage/ && \
      chown -R www-data:www-data /var/www/ && \
      a2enmod rewrite
+
+
+#     FROM php:7.4-apache
+# .....
+# ARG user_id=1000
+# RUN usermod -u $user_id www-data
