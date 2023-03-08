@@ -4,11 +4,7 @@
 /public/storage
 /storage/*.key
 /vendor
-/db/*
-/docker/*
-docker-compose.yml
 .env
-.env.dev
 .env.backup
 .phpunit.result.cache
 Homestead.json
