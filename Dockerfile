@@ -10,6 +10,10 @@ RUN composer update --prefer-dist --no-dev --optimize-autoloader --no-interactio
 #dependcies as development
 FROM php:8.1-apache-buster as dev
 
+#usermod 
+ARG user_id=1000
+RUN usermod -u $user_id www-data
+
 # setting environment
 ENV APP_ENV=dev
 ENV APP_DEBUG=true
@@ -40,3 +44,30 @@ RUN php artisan config:cache && \
      chmod 777 -R /var/www/html/storage/ && \
      chown -R www-data:www-data /var/www/ && \
      a2enmod rewrite
+
+
+#production
+FROM php:8.1-apache-buster as production
+
+#usermod 
+ARG user_id=1000
+RUN usermod -u $user_id www-data
+
+#change environment
+ENV APP_ENV=production
+ENV APP_DEBUG=false
+
+#install dependencies
+RUN docker-php-ext-configure opcache --enable-opcache && \
+    docker-php-ext-install pdo pdo_mysql
+COPY docker/php/conf.d/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+
+COPY --from=build /app /var/www/html
+COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY .env.prod /var/www/html/.env
+
+RUN php artisan config:cache && \
+    php artisan route:cache && \
+    chmod 777 -R /var/www/html/storage/ && \
+    chown -R www-data:www-data /var/www/ && \
+    a2enmod rewrite
