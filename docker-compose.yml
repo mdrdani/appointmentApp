@@ -1,41 +1,32 @@
-version: '3'
+version: '3.5'
 services:
-  app:
-    build:
-      context: ./
-      target: dev
-    image: cehamot/appointment-app:latest
-    volumes:
-      - .:/var/www/html
-      - .env.dev:/var/www/html/.env
+  php:
+    image: mdrdani/appoinmentapp:latest
+    restart: always
     ports:
-      - "8082:80"
+      - 8000:80
     environment:
+      - APP_KEY="base64:XcfPCRa5My0zhQUzJOe3PbtWlfyrFomSSjeT4BE45vk="
       - APP_ENV=local
       - APP_DEBUG=true
-    networks:
-      - laravel
-    depends_on:
-      - mysql
+      - DB_PORT=3306
+      - DB_HOST=mysql
+      - DB_DATABASE
+      - DB_USERNAME
+      - DB_PASSWORD
   mysql:
     image: 'mysql/mysql-server:8.0'
+    restart: always
     environment:
-        MYSQL_ROOT_HOST: "%"
-        MYSQL_ROOT_PASSWORD: "root"
-        MYSQL_USER: "laravel"
-        MYSQL_PASSWORD: "secret123"
-        MYSQL_DATABASE: "db_bookingrs"
-        MYSQL_ALLOW_EMPTY_PASSWORD: 1
-    ports:
-      - 3906:3306
+      - MYSQL_ROOT_HOST= "%"
+      - MYSQL_ROOT_PASSWORD= "root"
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ALLOW_EMPTY_PASSWORD= 1
     volumes:
       - 'mysql8.0:/var/lib/mysql'
       - './db/init.sql:/docker-entrypoint-initdb.d/01init.sql'
-    networks:
-      - laravel
-networks:
-  laravel:
-    driver: bridge
 volumes:
   mysql8.0:
     driver: local
