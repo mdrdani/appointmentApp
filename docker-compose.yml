@@ -1,12 +1,12 @@
 version: '3.5'
 services:
   php:
-    image: mdrdani/appoinmentapp:latest
+    image: cehamot/rssejahterapp:latest
     restart: always
     ports:
       - 8000:80
     environment:
-      - APP_KEY="base64:XcfPCRa5My0zhQUzJOe3PbtWlfyrFomSSjeT4BE45vk="
+      - APP_KEY="base64:V0xAWsrcyAPMY1+kgysAWm2ptVSA11+UAu78o/MqDjI="
       - APP_ENV=local
       - APP_DEBUG=true
       - DB_PORT=3306
@@ -15,18 +15,12 @@ services:
       - DB_USERNAME
       - DB_PASSWORD
   mysql:
-    image: 'mysql/mysql-server:8.0'
+    image: mysql/mysql-server:8.0
     restart: always
     environment:
-      - MYSQL_ROOT_HOST= "%"
-      - MYSQL_ROOT_PASSWORD= "root"
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
       - MYSQL_DATABASE=${DB_DATABASE}
       - MYSQL_USER=${DB_USERNAME}
       - MYSQL_PASSWORD=${DB_PASSWORD}
-      - MYSQL_ALLOW_EMPTY_PASSWORD= 1
     volumes:
-      - 'mysql8.0:/var/lib/mysql'
-      - './db/init.sql:/docker-entrypoint-initdb.d/01init.sql'
-volumes:
-  mysql8.0:
-    driver: local
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql

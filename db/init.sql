@@ -14,9 +14,9 @@
 
 
 -- Dumping database structure for db_bookingrs
-DROP DATABASE IF EXISTS `db_bookingrs`;
-CREATE DATABASE IF NOT EXISTS `db_bookingrs` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `db_bookingrs`;
+DROP DATABASE IF EXISTS `db_rssejahtera`;
+CREATE DATABASE IF NOT EXISTS `db_rssejahtera` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `db_rssejahtera`;
 
 -- Dumping structure for table db_bookingrs.daily_slots
 DROP TABLE IF EXISTS `daily_slots`;
