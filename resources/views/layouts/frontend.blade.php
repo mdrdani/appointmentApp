@@ -42,7 +42,7 @@
         <section class="d-flex align-items-center" id="hero">
             <div class="container">
                 <h1>Selamat Datang</h1>
-                <h2>di Rumah Sakit Sejahtera</h2>
+                <h2>di Rumah Sakit Sejahtera V2</h2>
                 
             </div>
         </section>
