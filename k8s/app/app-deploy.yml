@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: rssejahteraapp
+spec:
+  replicas: 1
+  serviceName: rssejahteraapp
+  selector:
+    matchLabels:
+      app: rssejahteraapp
+  template:
+    metadata:
+      labels:
+        app: rssejahteraapp
+    spec:
+      containers:
+        - name: rssejahteraapp
+          image: "cehamot/rssejahterapp:9"
+          imagePullPolicy: IfNotPresent
+          env:
+          - name: APP_KEY
+            value: "base64:V0xAWsrcyAPMY1+kgysAWm2ptVSA11+UAu78o/MqDjI="
+          - name: DB_DATABASE
+            value: db_rssejahtera
+          - name: DB_USERNAME
+            value: dani
+          - name: DB_PASSWORD
+            value: "secret123"
+          ports:
+            - containerPort: 8000
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8000
+            initialDelaySeconds: 120
+            timeoutSeconds: 30
+            failureThreshold: 6
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8000
+            initialDelaySeconds: 30
+            timeoutSeconds: 3
+            periodSeconds: 5
+  updateStrategy:
+    type: RollingUpdate
