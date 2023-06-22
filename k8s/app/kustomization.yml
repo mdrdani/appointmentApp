@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: metabase
+namespace: rssejahteraapp
 resources:
   - namespace.yaml
-  - metabase-deploy.yaml
-  - metabase-service.yaml
+  - app-deploy.yaml
+  - app-service.yaml
