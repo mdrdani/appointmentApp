@@ -27,18 +27,18 @@ spec:
           - name: DB_PASSWORD
             value: "secret123"
           ports:
-            - containerPort: 8000
+            - containerPort: 8080
           livenessProbe:
             httpGet:
               path: /
-              port: 8000
+              port: 8080
             initialDelaySeconds: 120
             timeoutSeconds: 30
             failureThreshold: 6
           readinessProbe:
             httpGet:
               path: /
-              port: 8000
+              port: 8080
             initialDelaySeconds: 30
             timeoutSeconds: 3
             periodSeconds: 5
