@@ -3,7 +3,7 @@ WORKDIR /var/www/html
 COPY . /var/www/html/
 
 RUN npm install
-RUN npm run build
+RUN npm run dev
 
 FROM nginx:1.19-alpine AS nginx
 COPY /docker/vhost.conf /etc/nginx/conf.d/default.conf
