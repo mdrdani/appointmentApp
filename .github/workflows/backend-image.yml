@@ -19,10 +19,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          dockerfile: docker/fpm.Dockerfile
-          push: true
-          tags: cehamot/backend-appoinmentapp:${{ github.run_number }}
+      - name: Build docker image
+        run: docker build . -f docker/fpm.Dockerfile -t cehamot/backend-appoinmentapp:${{ github.run_number }}
+       
+      - name: Push docker image
+         run: docker push cehamot/backend-appoinmentapp:${{ github.run_number }}
