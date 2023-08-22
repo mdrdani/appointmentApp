@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Booking Counseling Sekolah Darma Bangsa</title>
+    <title>Appoinment App Rs. Sejahtera</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <link href="{{ asset('ui/assets/img/favicon.png') }}" rel="icon">
@@ -42,7 +42,7 @@
         <section class="d-flex align-items-center" id="hero">
             <div class="container">
                 <h1>Selamat Datang</h1>
-                <h2>di Rumah Sakit Sejahtera</h2>
+                <h2>di Rumah Sakit Sejahtera V2</h2>
                 
             </div>
         </section>
@@ -68,6 +68,15 @@
                 <div class="me-md-auto text-center text-md-start">
                     <div class="copyright">
                         <strong><span>Aplikasi</span></strong>. by Localhost
+                        <strong>Database Connected: </strong>
+                              @php
+                                   try {
+                                        DB::connection()->getPDO();
+                                        echo DB::connection()->getDatabaseName();
+                                        } catch (\Exception $e) {
+                                        echo 'None';
+                                   }
+                              @endphp
                     </div>
                   
                 </div>
