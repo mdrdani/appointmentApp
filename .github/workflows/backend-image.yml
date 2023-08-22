@@ -22,6 +22,7 @@ jobs:
       - name: Build and push docker image
         uses: docker/build-push-action@v3
         with:
-          context: ./docker/fpm.Dockerfile
+          context: .
+          dockerfile: docker/fpm.Dockerfile
           push: true
           tags: cehamot/backend-appoinmentapp:${{ github.run_number }}
