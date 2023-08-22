@@ -1,0 +1,26 @@
+name: Docker Image Backend CI
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Login ke Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build docker image
+        run: docker build . -f docker/nginx.Dockerfile -t cehamot/frontend-appoinmentapp:${{ github.run_number }}
+       
+      - name: Push docker image
+        run: docker push cehamot/frontend-appoinmentapp:${{ github.run_number }}
